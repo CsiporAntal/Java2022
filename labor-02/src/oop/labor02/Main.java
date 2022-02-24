@@ -22,7 +22,7 @@ public class Main{
 //          sargaauto.novelSebesseg(); }
 //          System.out.println(sargaauto);
           //3
-           Datum datum = new Datum(2022 ,2, 24);
+           Datum datum = new Datum(2000 ,2, 24);
            System.out.println(datum);
 
 

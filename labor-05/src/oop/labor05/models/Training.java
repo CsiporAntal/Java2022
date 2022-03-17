@@ -24,13 +24,13 @@ public class Training {
         enrolledStudents.add(student);
         return true;
     }
-    public Student findStudentById(String student){
+    public Student findStudentById(String id){
         for (Student a:enrolledStudents){
-            if(a.getID().equals(student.getID())){
-                retrun ID;
+            if(a.getID().equals(id)){
+                return a;
             }
         }
-        return 0;
+        return null;
     }
     public Course getCourse() {
         return course;
@@ -51,7 +51,12 @@ public class Training {
                 ", enrolledStudents=" + enrolledStudents +
                 '}';
     }
-    public void unEnroll(String student){
-        student = null;
+    public void unEnroll(String id){
+        for (Student s:enrolledStudents){
+            if(s.getID().equals(id)){
+                enrolledStudents.remove(s);
+                return;
+            }
+        }
     }
 }

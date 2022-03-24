@@ -7,9 +7,7 @@ import oop.labor05.models.Training;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 import java.util.random.RandomGenerator;
 
 public class Main {
@@ -26,6 +24,7 @@ public class Main {
                 t.enroll(students.get(i));
                 //RandomGenerator
             }
+            Collections.shuffle(students);
             t.printToFile();
         }
 

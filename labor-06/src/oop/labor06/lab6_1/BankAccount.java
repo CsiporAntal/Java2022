@@ -12,7 +12,8 @@ public class BankAccount {
         this.accountNumber = createAccountNumber();
     }
     private String createAccountNumber(){
-        //
+        int n = ACCOUNT_NUMBER_LENGHT - PREFIX.length();
+        return String.format("%s%0"+n+"d",PREFIX,numAccounts++);
     }
 
     public  double getBalance(){
